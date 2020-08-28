@@ -8,11 +8,13 @@ from random import shuffle
 import sys
 import os
 import csv
+import pandas as pd
 
 def read_fastq_file(fn):
     
     data = []
     seqIDs = []
+    id_counter = 1
 
     with open(fn, 'r') as fh:
         
@@ -23,7 +25,8 @@ def read_fastq_file(fn):
                 lines.append(line.rstrip())
             else:
                 data.append(''.join(lines))
-                seqIDs.append(findSequenceId(line))
+                seqIDs.append([line, 'ID-' + str(id_counter)])
+                id_counter += 1
                 lines = []
     
         data.append(''.join(lines))
@@ -32,12 +35,6 @@ def read_fastq_file(fn):
             
     return data, seqIDs
 
-def findSequenceId(myline):
-    
-    index = myline.find('|')
-    seqID = myline[1:index-1]
-
-    return seqID
 
 def save_results_to_file(data, name, outputFolder, seqIDs, seqName):
     
@@ -54,13 +51,13 @@ def save_results_to_file(data, name, outputFolder, seqIDs, seqName):
         for item in data:
             f.write("%s\n" % item)
 
-    with open(seqName, 'w') as write_obj:
-        csv_writer = csv.writer(write_obj)
-        csv_writer.writerow(seqIDs)
-    
+    df = pd.DataFrame(seqIDs, columns=['Row', 'ID'])
+    df.to_csv(seqName, index=False)
+
     os.chdir(currPath)
     
     return
+
 
 def file_len(fname):
     
@@ -72,6 +69,7 @@ def file_len(fname):
             pass
     
     return i+1, line_len
+
 
 if __name__ == "__main__":
     
