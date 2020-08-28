@@ -1,1 +1,563 @@
-MT293204,MT263446,MT263435,MN988713,MT293209,MT263396,MT262915,MT159721,MT253709,MT019532,MT246452,MT291830,MT263468,MT263408,MT159720,MT019530,MT012098,MT276328,MT259226,MT263399,MT262993,MT192759,MT262911,MT293183,MT159722,MT240479,MT263415,MN988669,MT293189,MT159713,MT291827,MT263463,MT027064,MT020880,MT262902,MT263464,MT262904,MT293176,MT253698,MT246477,MT246457,MN988668,MT291831,MT262913,MT259271,MN996531,MT233526,MT293197,MT258377,MT192765,MT276325,MT093631,MT263419,MT281577,MN985325,MT072688,MT259254,MT263406,MT293171,MT262901,MT263469,MT246480,MT135044,MT253701,MT192773,MT188341,MT291834,MT262905,MT246481,MT259266,MT259246,MT262906,MT246474,MT159714,MT159711,MT118835,MT276597,MT263074,MT293191,MT152824,MT159719,MT292569,MT246476,MT262914,MT039887,MT066175,MT259267,MT259264,MT262912,MN975262,MT259241,MT135041,MT259256,MT192772,MT259260,MT044257,MT121215,MT276323,MN996527,MT263440,MT259243,MT159717,MN996530,MT019531,MT293225,MT276327,MT292571,MT253704,MT126808,MN908947,MT123292,MT027062,MT293188,MT293201,MT246471,MT263424,MT259261,MT263457,MT291829,MT039890,MT246450,MT263416,MT262907,MT293206,MT246488,MT253710,MT263447,MT259231,MT263462,MT293195,MT259229,MT291828,MT263437,MT263392,MT262899,MT259252,MT159718,MT259282,MT263410,MT159707,MT246487,MN996529,MT106053,MT159705,MT184911,MT007544,MT019533,MT262916,MT258381,MT163716,MT293159,MT259248,MT253706,MT163719,MT276331,MT293220,MT293199,MT263450,MT135043,MT027063,MT246466,MT262896,MT106054,MT253702,MT263394,MT262908,MT253703,MT293178,NC_045512,MT184913,MT291835,MT259230,MT258383,MT253697,MN994467,MT226610,MT258380,MT259227,MT159712,MT253696,MT293186,MT019529,MT159706,MT259249,MT246467,MT293210,MT233523,MT293192,MT184912,MT293181,MT184908,MT020881,MT293172,MT262903,MT159716,MT262897,MT262898,MT263438,MT263425,MT106052,MT188339,MT253708,MT135042,MT293205,MT291832,MT262910,MN997409,MT159709,MT263434,MT259228,MT263429,MT292573,MT163718,MT276329,MT293202,MT276324,MT184910,MT263411,MT259253,MT159715,MT066176,MT184909,MT259278,MT259286,MT163717,MT093571,MT039873,MT291826,MT293190,MT251974,MT276598,MT246667,MT291836,MT246470,MT050493,MT263404,MT049951,MT246478,MT184907,MT262909,MT044258,MT259239,MT295464,MT293162,MT246455,MT253699,MT259287,MT276330,MN994468,MT159710,MT293212,MT295465,MT123290,MT253707,MT293222,MT253705,MT293163,MT246464,MT159708,MT123293,MT292572,MT293219,MT291833,MT259251,MT039888,MN938384,MT263458,MT263402,MT259235,MT258379,MN996528,MT258378,MT276326,MT253700,MT188340,MT263414,MT259244,MT123291,MT259263,MT251976,MT262900
+Row,ID
+">MT253697 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-178/2020| complete genome
+",ID-163
+">NC_045512 |Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1| complete genome
+",ID-1
+">MT293202 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW438/2020| complete genome
+",ID-31
+">MT246488 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW231/2020| complete genome
+",ID-184
+">MT135042 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/231/2020| complete genome
+",ID-231
+">MT263457 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW378/2020| complete genome
+",ID-68
+">MT123293 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/IQTC03/2020| complete genome
+",ID-237
+">MT263450 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW370/2020| complete genome
+",ID-87
+">MT159706 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-8/2020| complete genome
+",ID-225
+">MT292571 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ESP/Valencia12/2020| complete genome
+",ID-26
+">MT093571 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/SWE/01/2020| complete genome
+",ID-244
+">MT246474 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW217/2020| complete genome
+",ID-175
+">MT295465 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/UF-2/2020| complete genome
+",ID-25
+">MT263425 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW345/2020| complete genome
+",ID-85
+">MT291830 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-WH05/2019| complete genome
+",ID-49
+">MT184913 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-26/2020| complete genome
+",ID-203
+">MT263462 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW383/2020| complete genome
+",ID-109
+">MT259241 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW249/2020| complete genome
+",ID-140
+">MT192759 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/TWN/CGMH-CGU-01/2020| complete genome
+",ID-194
+">MT246457 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW200/2020| complete genome
+",ID-174
+">MT246667 |Severe acute respiratory syndrome coronavirus 2 strain FDAARGOS_983 isolate 2019-nCoV/USA-WA1/2020| complete genome
+",ID-187
+">MT246476 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW219/2020| complete genome
+",ID-178
+">MT262903 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH9/2020| complete genome
+",ID-115
+">MT039887 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-WI1/2020| complete genome
+",ID-253
+">MT253696 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-162/2020| complete genome
+",ID-162
+">MT072688 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/NPL/61-TW/2020| complete genome
+",ID-246
+">MT263404 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW324/2020| complete genome
+",ID-104
+">MT253700 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-481/2020| complete genome
+",ID-154
+">MN996531 |Severe acute respiratory syndrome coronavirus 2 isolate WIV07| complete genome
+",ID-271
+">MT020880 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-WA1-A12/2020| complete genome
+",ID-265
+">MT262913 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH22/2020| complete genome
+",ID-72
+">MT263411 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW331/2020| complete genome
+",ID-97
+">MT184911 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-24/2020| complete genome
+",ID-202
+">MT246477 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW220/2020| complete genome
+",ID-177
+">MT291833 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-BJ03/2020| complete genome
+",ID-41
+">MT291829 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-WH04/2019| complete genome
+",ID-48
+">MN988713 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-IL1/2020| complete genome
+",ID-277
+">MT259264 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW272/2020| complete genome
+",ID-119
+">MT259230 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_YB012506/2020| complete genome
+",ID-149
+">MT039873 |Severe acute respiratory syndrome coronavirus 2 isolate HZ-1| complete genome
+",ID-254
+">MT259267 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW275/2020| complete genome
+",ID-136
+">MT293162 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW397/2020| complete genome
+",ID-9
+">MT093631 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/WH-09/2020| complete genome
+",ID-245
+">MT253702 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-49/2020| complete genome
+",ID-159
+">MT259271 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW279/2020| complete genome
+",ID-137
+">MT159707 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-10/2020| complete genome
+",ID-224
+">MT246450 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW193/2020| complete genome
+",ID-172
+">MN908947 |Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1| complete genome
+",ID-281
+">MT192765 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/PC00101P/2020| complete genome
+",ID-192
+">MT263416 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW336/2020| complete genome
+",ID-98
+">MT259260 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW268/2020| complete genome
+",ID-133
+">MT293172 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW407/2020| complete genome
+",ID-34
+">MT263429 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW349/2020| complete genome
+",ID-83
+">MT293210 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW447/2020| complete genome
+",ID-22
+">MT246464 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW207/2020| complete genome
+",ID-171
+">MT246478 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW221/2020| complete genome
+",ID-182
+">MT291832 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-BJ02/2020| complete genome
+",ID-40
+">MT159716 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-18/2020| complete genome
+",ID-213
+">MT258379 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/CZB-RR057-007/2020| complete genome
+",ID-116
+">MT050493 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/166/2020| complete genome
+",ID-229
+">MT259251 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW259/2020| complete genome
+",ID-117
+">MT066176 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/NTU02/TWN/human/2020| complete genome
+",ID-248
+">MT262912 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH21/2020| complete genome
+",ID-71
+">MT293189 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW424/2020| complete genome
+",ID-3
+">MT262993 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-Cov-2/human/PAK/Manga1/2020| complete genome
+",ID-81
+">MT159718 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-2/2020| complete genome
+",ID-220
+">MT263392 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW310/2020| complete genome
+",ID-114
+">MT259278 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW288/2020| complete genome
+",ID-120
+">MT012098 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/29/2020| complete genome
+",ID-228
+">MT262907 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH14/2020| complete genome
+",ID-76
+">MT123291 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/IQTC02/2020| complete genome
+",ID-239
+">MT163716 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA3-UW1/2020| complete genome
+",ID-206
+">MT263415 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW335/2020| complete genome
+",ID-84
+">MN938384 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV_HKU-SZ-002a_2020| complete genome
+",ID-279
+">MT291831 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-BJ01/2020| complete genome
+",ID-39
+">MT246480 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW223/2020| complete genome
+",ID-176
+">MT253698 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-185/2020| complete genome
+",ID-152
+">MT121215 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/SH01/2020| complete genome
+",ID-227
+">MT259287 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW297/2020| complete genome
+",ID-127
+">MN996528 |Severe acute respiratory syndrome coronavirus 2 isolate WIV04| complete genome
+",ID-268
+">MT263468 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW389/2020| complete genome
+",ID-94
+">MT293199 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW435/2020| complete genome
+",ID-17
+">MT259286 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW296/2020| complete genome
+",ID-126
+">MT293225 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW466/2020| complete genome
+",ID-15
+">MN994468 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA2/2020| complete genome
+",ID-274
+">MT293197 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW433/2020| complete genome
+",ID-19
+">MT293186 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW421/2020| complete genome
+",ID-4
+">MT263074 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/PER/Peru-10/2020| complete genome
+",ID-82
+">MT259239 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW247/2020| complete genome
+",ID-139
+">MT066175 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/NTU01/TWN/human/2020| complete genome
+",ID-247
+">MT263396 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW315/2020| complete genome
+",ID-66
+">MT251976 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW240/2020| complete genome
+",ID-161
+">MT027063 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA4/2020| complete genome
+",ID-256
+">MT258381 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/CZB-RR057-013/2020| complete genome
+",ID-121
+">MT039890 |Severe acute respiratory syndrome coronavirus 2 isolate SNU01| complete genome
+",ID-252
+">MT188341 |Severe acute respiratory syndrome coronavirus 2 isolate USA/MN1-MDH1/2020| complete genome
+",ID-197
+">MT293188 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USACT-UW423/2020| complete genome
+",ID-29
+">MT246452 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW195/2020| complete genome
+",ID-173
+">MT246455 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW198/2020| complete genome
+",ID-181
+">MT293205 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW442/2020| complete genome
+",ID-21
+">MT263469 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW390/2020| complete genome
+",ID-113
+">MT159712 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-14/2020| complete genome
+",ID-215
+">MT263414 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW334/2020| complete genome
+",ID-105
+">MT262916 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH23/2020| complete genome
+",ID-103
+">MT262900 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH6/2020| complete genome
+",ID-61
+">MT135041 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/105/2020| complete genome
+",ID-232
+">MT192773 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/VNM/nCoV-19-02S/2020| complete genome
+",ID-191
+">MN975262 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV_HKU-SZ-005b_2020| complete genome
+",ID-278
+">MT123292 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/IQTC04/2020| complete genome
+",ID-238
+">MT135043 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/233/2020| complete genome
+",ID-233
+">MN985325 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-WA1/2020| complete genome
+",ID-280
+">MT259243 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW251/2020| complete genome
+",ID-141
+">MT246470 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW213/2020| complete genome
+",ID-185
+">MT184907 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-19/2020| complete genome
+",ID-201
+">MT262915 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH13/2020| complete genome
+",ID-99
+">MT192772 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/VNM/nCoV-19-01S/2020| complete genome
+",ID-193
+">MT263410 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW330/2020| complete genome
+",ID-102
+">MT293220 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW460/2020| complete genome
+",ID-8
+">MT253709 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-90/2020| complete genome
+",ID-168
+">MT263464 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW385/2020| complete genome
+",ID-108
+">MT253704 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-576/2020| complete genome
+",ID-157
+">MT293222 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW463/2020| complete genome
+",ID-14
+">MT253699 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-477/2020| complete genome
+",ID-164
+">MT253708 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-79/2020| complete genome
+",ID-153
+">MT259246 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW254/2020| complete genome
+",ID-143
+">MT246487 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW230/2020| complete genome
+",ID-179
+">MT276328 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/OR_2656/2020| complete genome
+",ID-59
+">MT159717 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-1/2020| complete genome
+",ID-216
+">MT159711 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-13/2020| complete genome
+",ID-214
+">MT126808 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/BRA/SP02/2020| complete genome
+",ID-235
+">MT262905 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH11/2020| complete genome
+",ID-75
+">MT184909 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-22/2020| complete genome
+",ID-199
+">MT262911 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH20/2020| complete genome
+",ID-73
+">MT276329 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/FL_5125/2020| complete genome
+",ID-60
+">MT240479 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/PAK/Gilgit1/2020| complete genome
+",ID-188
+">MT293171 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW406/2020| complete genome
+",ID-33
+">MN996529 |Severe acute respiratory syndrome coronavirus 2 isolate WIV05| complete genome
+",ID-269
+">MT263458 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW379/2020| complete genome
+",ID-88
+">MT262904 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH10/2020| complete genome
+",ID-111
+">MT293178 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW413/2020| complete genome
+",ID-37
+">MT106052 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA7/2020| complete genome
+",ID-242
+">MT276330 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/FL_5091/2020| complete genome
+",ID-53
+">MT295464 |Severe acute respiratory syndrome coronavirus 2 isolate SARS CoV-2/human/USA/UF-1/2020| complete genome
+",ID-12
+">MT184912 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-25/2020| complete genome
+",ID-204
+">MT246467 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW210/2020| complete genome
+",ID-186
+">MT291836 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-BJ07/2020| complete genome
+",ID-45
+">MT263424 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW344/2020| complete genome
+",ID-110
+">MT263446 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW366/2020| complete genome
+",ID-92
+">MT259248 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW256/2020| complete genome
+",ID-144
+">MT253705 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-60/2020| complete genome
+",ID-158
+">MT049951 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Yunnan-01/2020| complete genome
+",ID-251
+">MT262899 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH5/2020| complete genome
+",ID-74
+">MT259227 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_YB012611/2020| complete genome
+",ID-148
+">MT188340 |Severe acute respiratory syndrome coronavirus 2 isolate USA/MN2-MDH2/2020| complete genome
+",ID-195
+">MT019529 |Severe acute respiratory syndrome coronavirus 2 isolate BetaCoV/Wuhan/IPBCAMS-WH-01/2019| complete genome
+",ID-264
+">MT293195 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USACT-UW430/2020| complete genome
+",ID-18
+">MT292572 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ESP/Valencia11/2020| complete genome
+",ID-38
+">MT291826 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-WH01/2019| complete genome
+",ID-44
+">MT259226 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_OS52/2020| complete genome
+",ID-150
+">MT291828 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-WH03/2019| complete genome
+",ID-47
+">MT276597 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ISR/ISR_JP0320/2020| complete genome
+",ID-50
+">MT007544 |Severe acute respiratory syndrome coronavirus 2 isolate Australia/VIC01/2020| complete genome
+",ID-266
+">MT259249 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW257/2020| complete genome
+",ID-145
+">MT293204 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW441/2020| complete genome
+",ID-11
+">MT293192 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USACT-UW427/2020| complete genome
+",ID-30
+">MT020881 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-WA1-F6/2020| complete genome
+",ID-259
+">MT262914 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH24/2020| complete genome
+",ID-80
+">MT259254 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW262/2020| complete genome
+",ID-131
+">MT253701 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-48/2020| complete genome
+",ID-165
+">MT159713 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-15/2020| complete genome
+",ID-226
+">MT263435 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW355/2020| complete genome
+",ID-67
+">MT263402 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW322/2020| complete genome
+",ID-95
+">MT044258 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA6/2020| complete genome
+",ID-250
+">MT263419 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW339/2020| complete genome
+",ID-100
+">MN996530 |Severe acute respiratory syndrome coronavirus 2 isolate WIV06| complete genome
+",ID-270
+">MT258383 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/CZB-RR057-015/2020| complete genome
+",ID-122
+">MT159705 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-7/2020| complete genome
+",ID-209
+">MT262902 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH8/2020| complete genome
+",ID-63
+">MT263440 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW360/2020| complete genome
+",ID-91
+">MT292569 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ESP/Valencia13/2020| complete genome
+",ID-16
+">MT258380 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/CZB-RR057-011/2020| complete genome
+",ID-129
+">MT246466 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW209/2020| complete genome
+",ID-169
+">MT159721 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-5/2020| complete genome
+",ID-221
+">MT163717 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA4-UW2/2020| complete genome
+",ID-207
+">MT259231 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_YB012504/2020| complete genome
+",ID-147
+">MT293206 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW443/2020| complete genome
+",ID-27
+">MT263438 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW358/2020| complete genome
+",ID-86
+">MT276326 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/GA_2741/2020| complete genome
+",ID-52
+">MT293159 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW394/2020| complete genome
+",ID-13
+">MT019533 |Severe acute respiratory syndrome coronavirus 2 isolate BetaCoV/Wuhan/IPBCAMS-WH-05/2020| complete genome
+",ID-260
+">MT259228 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_YB012605/2020| complete genome
+",ID-151
+">MT253707 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-638/2020| complete genome
+",ID-166
+">MT262896 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH2/2020| complete genome
+",ID-112
+">MT159719 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-3/2020| complete genome
+",ID-217
+">MT293191 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW426/2020| complete genome
+",ID-6
+">MT292573 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ESP/Valencia14/2020| complete genome
+",ID-24
+">MT159709 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-12/2020| complete genome
+",ID-219
+">MT106053 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA8/2020| complete genome
+",ID-241
+">MT262906 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH12/2020| complete genome
+",ID-69
+">MT263447 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW367/2020| complete genome
+",ID-93
+">MT259229 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_YB012602/2020| complete genome
+",ID-146
+">MT152824 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA2/2020| complete genome
+",ID-230
+">MT259282 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW292/2020| complete genome
+",ID-138
+">MT262901 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH7/2020| complete genome
+",ID-62
+">MT253706 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-62/2020| complete genome
+",ID-156
+">MT246481 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW224/2020| complete genome
+",ID-183
+">MT276323 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/RI_0520/2020| complete genome
+",ID-55
+">MT276331 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/TX_2020/2020| complete genome
+",ID-54
+">MT259261 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW269/2020| complete genome
+",ID-134
+">MT281577 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Fuyang_FY002/2020| complete genome
+",ID-7
+">MT262898 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH4/2020| complete genome
+",ID-64
+">MT263434 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW354/2020| complete genome
+",ID-106
+">MT253710 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-91/2020| complete genome
+",ID-167
+">MT188339 |Severe acute respiratory syndrome coronavirus 2 isolate USA/MN3-MDH3/2020| complete genome
+",ID-196
+">MT293181 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW416/2020| complete genome
+",ID-36
+">MT293163 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAUNKNOWN-UW398/2020| complete genome
+",ID-32
+">MT263408 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW328/2020| complete genome
+",ID-101
+">MT262908 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH17/2020| complete genome
+",ID-70
+">MT276325 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA_5030/2020| complete genome
+",ID-58
+">MT262897 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH3/2020| complete genome
+",ID-78
+">MT293183 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW418/2020| complete genome
+",ID-2
+">MT233526 |Severe acute respiratory syndrome coronavirus 2 strain FDAARGOS_983 isolate 2019-nCoV/USA-WA1/2020| complete genome
+",ID-180
+">MT263463 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW384/2020| complete genome
+",ID-107
+">MT159710 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-9/2020| complete genome
+",ID-211
+">MT259252 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW260/2020| complete genome
+",ID-124
+">MT159714 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-16/2020| complete genome
+",ID-223
+">MT044257 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-IL2/2020| complete genome
+",ID-249
+">MT263437 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW357/2020| complete genome
+",ID-90
+">MT184910 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-23/2020| complete genome
+",ID-200
+">MT293190 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW425/2020| complete genome
+",ID-5
+">MT135044 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/235/2020| complete genome
+",ID-234
+">MT163719 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA7-UW4/2020| complete genome
+",ID-205
+">MT184908 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-21/2020| complete genome
+",ID-198
+">MT259256 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW264/2020| complete genome
+",ID-132
+">MT251974 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW238/2020| complete genome
+",ID-160
+">MT019531 |Severe acute respiratory syndrome coronavirus 2 isolate BetaCoV/Wuhan/IPBCAMS-WH-03/2019| complete genome
+",ID-261
+">MT263394 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW313/2020| complete genome
+",ID-65
+">MT019532 |Severe acute respiratory syndrome coronavirus 2 isolate BetaCoV/Wuhan/IPBCAMS-WH-04/2019| complete genome
+",ID-262
+">MT226610 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/KMS1/2020| complete genome
+",ID-190
+">MT276324 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/CA_2602/2020| complete genome
+",ID-56
+">MT259235 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW243/2020| complete genome
+",ID-130
+">MT258377 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/CZB-RR057-005/2020| complete genome
+",ID-123
+">MT027064 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA5/2020| complete genome
+",ID-257
+">MT159708 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-11/2020| complete genome
+",ID-222
+">MT276327 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/GA_2742/2020| complete genome
+",ID-51
+">MT293201 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW437/2020| complete genome
+",ID-20
+">MT263406 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW326/2020| complete genome
+",ID-96
+">MT293209 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW446/2020| complete genome
+",ID-10
+">MT259266 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW274/2020| complete genome
+",ID-135
+">MT123290 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/IQTC01/2020| complete genome
+",ID-236
+">MT106054 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-TX1/2020| complete genome
+",ID-243
+">MT276598 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ISR/ISR_IT0320/2020| complete genome
+",ID-57
+">MT293176 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USACT-UW411/2020| complete genome
+",ID-35
+">MT253703 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/HZ-551/2020| complete genome
+",ID-155
+">MT027062 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA3/2020| complete genome
+",ID-258
+">MT159715 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-17/2020| complete genome
+",ID-212
+">MT159722 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-6/2020| complete genome
+",ID-210
+">MT246471 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW214/2020| complete genome
+",ID-170
+">MT039888 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-MA1/2020| complete genome
+",ID-255
+">MT291827 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-WH02/2019| complete genome
+",ID-46
+">MT019530 |Severe acute respiratory syndrome coronavirus 2 isolate BetaCoV/Wuhan/IPBCAMS-WH-02/2019| complete genome
+",ID-263
+">MT159720 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CruiseA-4/2020| complete genome
+",ID-218
+">MN988668 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV WHU01| complete genome
+",ID-276
+">MT263399 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW319/2020| complete genome
+",ID-89
+">MT163718 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA6-UW3/2020| complete genome
+",ID-208
+">MT291834 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-BJ04/2020| complete genome
+",ID-42
+">MT258378 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/CZB-RR057-006/2020| complete genome
+",ID-128
+">MT262910 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH19/2020| complete genome
+",ID-79
+">MT233523 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ESP/Valencia8/2020| complete genome
+",ID-189
+">MT259253 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW261/2020| complete genome
+",ID-118
+">MT259244 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW252/2020| complete genome
+",ID-142
+">MN994467 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA1/2020| complete genome
+",ID-273
+">MT118835 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-CA9/2020| complete genome
+",ID-240
+">MT293219 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW457/2020| complete genome
+",ID-23
+">MN996527 |Severe acute respiratory syndrome coronavirus 2 isolate WIV02| complete genome
+",ID-267
+">MT291835 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/CHN/Wuhan_IME-BJ05/2020| complete genome
+",ID-43
+">MT259263 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-UW271/2020| complete genome
+",ID-125
+">MT262909 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/WA-NH18/2020| complete genome
+",ID-77
+">MN988669 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV WHU02| complete genome
+",ID-272
+">MN997409 |Severe acute respiratory syndrome coronavirus 2 isolate 2019-nCoV/USA-AZ1/2020| complete genome
+",ID-275
+">MT293212 |Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USAWA-UW449/2020| complete genome
+",ID-28

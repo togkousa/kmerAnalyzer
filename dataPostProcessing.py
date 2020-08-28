@@ -17,23 +17,16 @@ def shufflingBackwords(clustData, seqIDs):
     with open(fn, 'r') as fh:
         for line in fh:
             if line[0] == '>':
-                seqIDs_initial_order.append(findSequenceId(line))
+                seqIDs_initial_order.append(line)
     
     reorderingVector = []
     for id in seqIDs:
-        reorderingVector.append(seqIDs_initial_order.index(id))
+        reorderingVector.append(seqIDs_initial_order.index(id[0]))
     
     seqIDs = [x for _,x in sorted(zip(reorderingVector,seqIDs))]
     clustData = [x for _,x in sorted(zip(reorderingVector,clustData))]
 
     return clustData, seqIDs
-
-def findSequenceId(myline):
-    
-    index = myline.find('|')
-    seqID = myline[1:index-1]
-
-    return seqID
 
 
 def loadClusteringData():
@@ -53,11 +46,14 @@ def loadClusteringData():
         cpamreader = csv.reader(csvfile)
         seqIndices = list(cpamreader)
     
-    with open(seqIDsFile) as csvfile:
-        cpamreader = csv.reader(csvfile)
-        seqIDslist = list(cpamreader)
-        seqIDs = seqIDslist[0]
     
+    seqs = pd.read_csv(seqIDsFile)
+    seqIDs = []
+     
+    for index, rows in seqs.iterrows(): 
+        my_list =[rows.Row, rows.ID] 
+        seqIDs.append(my_list) 
+
     to_be_deleted = []
     for i in range(len(inputData)):
         if inputData[i][2] == str(0) or  inputData[i][2] == str(281):
@@ -75,17 +71,14 @@ def loadClusteringData():
             if str(j) in seqIndices[i]:
                 clustData[j][i] = 1
 
-    clustData, seqIDs = shufflingBackwords(clustData, seqIDs)      
-    dfObj = pd.DataFrame(clustData, columns = kmersList, index= seqIDs)
-    dfObj.to_csv(clusteringDataPath, index=seqIDs, columns=kmersList)
+    clustData, seqIDs = shufflingBackwords(clustData, seqIDs)    
+    this_seqIDs = [seqIDs[i][1] for i in range(len(seqIDs))]
 
-    with open(clusteringDataPathNoHeaers, 'w') as write_obj:
-        # Create a writer object from csv module
-        csv_writer = csv.writer(write_obj)
-        for i in range(len(clustData)):
-            # Add contents of list as last row in the csv file
-            csv_writer.writerow(clustData[i])
+    dfObj = pd.DataFrame(clustData, columns = kmersList, index= this_seqIDs)
+    dfObj.to_csv(clusteringDataPath, index=this_seqIDs, columns=kmersList)
     
+    # SOS: in order to read: data = pd.read_csv(path, index_col = 0)
+
     return clustData, dfObj
 
 if __name__ == "__main__":
