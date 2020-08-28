@@ -51,15 +51,15 @@ def loadClusteringData():
     clusteringDataPath = 'ClusteringData/clustData.csv'
     clusteringDataPathNoHeaers = 'ClusteringData/clustData_no_headres.csv'
     
-    with open(dataFile, newline='') as csvfile:
+    with open(dataFile) as csvfile:
         cpamreader = csv.reader(csvfile)
         inputData = list(cpamreader)
     
-    with open(seqIndicesFile, newline='') as csvfile:
+    with open(seqIndicesFile) as csvfile:
         cpamreader = csv.reader(csvfile)
         seqIndices = list(cpamreader)
     
-    with open(seqIDsFile, newline='') as csvfile:
+    with open(seqIDsFile) as csvfile:
         cpamreader = csv.reader(csvfile)
         seqIDslist = list(cpamreader)
         seqIDs = seqIDslist[0]
@@ -85,7 +85,7 @@ def loadClusteringData():
     dfObj = pd.DataFrame(clustData, columns = kmersList, index= seqIDs)
     dfObj.to_csv(clusteringDataPath, index=seqIDs, columns=kmersList)
 
-    with open(clusteringDataPathNoHeaers, 'a+', newline='') as write_obj:
+    with open(clusteringDataPathNoHeaers, 'w') as write_obj:
         # Create a writer object from csv module
         csv_writer = csv.writer(write_obj)
         for i in range(len(clustData)):

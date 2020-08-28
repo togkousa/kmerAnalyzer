@@ -54,7 +54,7 @@ def save_results_to_file(data, name, outputFolder, seqIDs, seqName):
         for item in data:
             f.write("%s\n" % item)
 
-    with open(seqName, 'w', newline='') as write_obj:
+    with open(seqName, 'w') as write_obj:
         csv_writer = csv.writer(write_obj)
         csv_writer.writerow(seqIDs)
     

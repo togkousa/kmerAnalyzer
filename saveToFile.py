@@ -19,7 +19,7 @@ def createCsvOutput(filename, treelist):
     name = 'output.csv'
     path = directory + name
 
-    with open(path, 'a+', newline='') as write_obj:
+    with open(path, 'w') as write_obj:
         # Create a writer object from csv module
         csv_writer = csv.writer(write_obj)
         for i in range(len(treelist)):
@@ -38,7 +38,7 @@ def createCsvOutputForSeqIndices(filename, seqIndices):
     name = 'seqIndices.csv'
     path = directory + name
 
-    with open(path, 'w', newline='') as write_obj:
+    with open(path, 'w') as write_obj:
         # Create a writer object from csv module
         csv_writer = csv.writer(write_obj)
         for i in range(len(seqIndices)):
