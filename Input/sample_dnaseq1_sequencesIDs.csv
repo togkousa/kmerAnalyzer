@@ -1,7 +1,7 @@
-Row,ID
-">seq2
-",ID-2
-">seq3
-",ID-3
-">seq1
-",ID-1
+ID,Row
+ID-2,">seq2
+"
+ID-3,">seq3
+"
+ID-1,">seq1
+"
