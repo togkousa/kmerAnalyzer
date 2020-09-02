@@ -12,7 +12,7 @@ import fastqToTxt
 
 # Some useful global variables
 mychars = ['A', 'C', 'G', 'T']
-iterations = 1000000
+iterations = 10000000
 training_perc = 0.4
 kmin = 4
 kmax = 7
@@ -153,7 +153,7 @@ def listTree(tree, curr_node, sequence, treelist, zipList, k):
         
         # Forming results
         this_seq = sequence + curr_node.char
-        treelist.append([this_seq, curr_node.depth, curr_node.count ,curr_node.evaluation, curr_node.sequenceIndices])
+        treelist.append([this_seq, curr_node.depth, curr_node.count ,curr_node.evaluation, curr_node.sequenceIndices, curr_node.timesPerSeq])
         
         # Calculating entropy
         if curr_node.depth == k:
@@ -207,7 +207,8 @@ if __name__ == "__main__":
                 # Only the first time run the first routine
                 if k == 4:
                     tree = routine_1(file, k, tree, numOfLines)
-                
+                    treelist, zipList = listTree(tree, root, '', [], [], k)
+                                    
                 # Else run the second routine
                 else:
                     tree = routine_2(file, k , tree, numOfLines)
@@ -224,10 +225,8 @@ if __name__ == "__main__":
             #treelist = treelist[0:topN]
             
             seqIndices = [treelist[i][4] for i in range(len(treelist))]
-            for i in range(len(treelist)):
-                del treelist[i][4]
+            timesPerSeq = [treelist[i][5] for i in range(len(treelist))]
             
-
             # Saving the output
             saveToFile.createCsvOutput(filename, treelist)
-            saveToFile.createCsvOutputForSeqIndices(filename,seqIndices)
+            saveToFile.createCsvOutputForSeqIndices(filename,seqIndices, timesPerSeq)

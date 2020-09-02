@@ -34,6 +34,7 @@ def loadClusteringData():
     # Path from data File and path for clustering
     dataFile = 'Output/sars_cov_2_fixed/output.csv'
     seqIndicesFile = 'Output/sars_cov_2_fixed/seqIndices.csv'
+    timesPerSeqFile = 'Output/sars_cov_2_fixed/timesPerSeq.csv'
     seqIDsFile = 'Input/sars_cov_2_fixed_sequencesIDs.csv'
     clusteringDataPath = 'ClusteringData/clustData.csv'
     clusteringDataPathNoHeaers = 'ClusteringData/clustData_no_headres.csv'
@@ -46,6 +47,9 @@ def loadClusteringData():
         cpamreader = csv.reader(csvfile)
         seqIndices = list(cpamreader)
     
+    with open(timesPerSeqFile) as csvfile:
+        cpamreader = csv.reader(csvfile)
+        timesPerSeq = list(cpamreader)
     
     seqs = pd.read_csv(seqIDsFile)
     seqIDs = []
@@ -56,11 +60,13 @@ def loadClusteringData():
 
     to_be_deleted = []
     for i in range(len(inputData)):
-        if inputData[i][2] == str(0) or  inputData[i][2] == str(281):
+        if inputData[i][2] == str(0) or  float(inputData[i][3]) <= 0:
             to_be_deleted.append(i)
     
     inputData = del_list_inplace(inputData, to_be_deleted)
     seqIndices =  del_list_inplace(seqIndices, to_be_deleted)
+    timesPerSeq = del_list_inplace(timesPerSeq, to_be_deleted)
+
     kmersList = [inputData[i][0] for i in range(len(inputData))]
     
     # initialization
@@ -69,8 +75,8 @@ def loadClusteringData():
     for i in range(len(seqIndices)):
         for j in range(len(seqIDs)):
             if str(j) in seqIndices[i]:
-                clustData[j][i] = 1
-
+                clustData[j][i] = timesPerSeq[i][seqIndices[i].index(str(j))]
+    
     clustData, seqIDs = shufflingBackwords(clustData, seqIDs)    
     this_seqIDs = [seqIDs[i][1] for i in range(len(seqIDs))]
 
