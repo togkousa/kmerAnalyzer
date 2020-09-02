@@ -15,7 +15,7 @@ mychars = ['A', 'C', 'G', 'T']
 iterations = 10000000
 training_perc = 0.4
 kmin = 4
-kmax = 7
+kmax = 60
 #topN = 100000
 
 # Adding all children in a node
@@ -226,7 +226,19 @@ if __name__ == "__main__":
             
             seqIndices = [treelist[i][4] for i in range(len(treelist))]
             timesPerSeq = [treelist[i][5] for i in range(len(treelist))]
+
+            for i in range(len(treelist)):
+                
+                del treelist[i][5]
+                del treelist[i][4]
+
+                if seqIndices[i][0] == "":
+                    del seqIndices[i][0]
+                    del timesPerSeq[i][0]
             
             # Saving the output
             saveToFile.createCsvOutput(filename, treelist)
             saveToFile.createCsvOutputForSeqIndices(filename,seqIndices, timesPerSeq)
+
+            command = "python3 dataPostProcessing.py "+ filename
+            os.system(command)

@@ -1,5 +1,7 @@
 import csv
 import pandas as pd
+import sys
+
 # import numpy as np
 # from collections import Counter
 
@@ -10,7 +12,7 @@ def del_list_inplace(l, id_to_del):
 
 def shufflingBackwords(clustData, seqIDs):
 
-    fn = 'data/sars_cov_2_fixed.fasta'
+    fn = 'data/' + filename + '.fasta'
     seqIDs_initial_order = []
     
     # load seqIDs with the initial order
@@ -29,13 +31,13 @@ def shufflingBackwords(clustData, seqIDs):
     return clustData, seqIDs
 
 
-def loadClusteringData():
+def loadClusteringData(filename):
 
     # Path from data File and path for clustering
-    dataFile = 'Output/sars_cov_2_fixed/output.csv'
-    seqIndicesFile = 'Output/sars_cov_2_fixed/seqIndices.csv'
-    timesPerSeqFile = 'Output/sars_cov_2_fixed/timesPerSeq.csv'
-    seqIDsFile = 'Input/sars_cov_2_fixed_sequencesIDs.csv'
+    dataFile = 'Output/'+ filename +'/output.csv'
+    seqIndicesFile = 'Output/'+ filename +'/seqIndices.csv'
+    timesPerSeqFile = 'Output/'+ filename +'/timesPerSeq.csv'
+    seqIDsFile = 'Input/'+ filename +'_sequencesIDs.csv'
     clusteringDataPath = 'ClusteringData/clustData.csv'
     clusteringDataPathNoHeaers = 'ClusteringData/clustData_no_headres.csv'
     
@@ -88,6 +90,8 @@ def loadClusteringData():
     return clustData, dfObj
 
 if __name__ == "__main__":
-    
+
+    filename = sys.argv[1]
+
     # have to do sth
-    clustData, dfObj = loadClusteringData()
+    clustData, dfObj = loadClusteringData(filename)
