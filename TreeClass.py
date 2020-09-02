@@ -13,7 +13,7 @@ class Node:
     Class Node
     """
     # Initializing a Node
-    def __init__(self, value = '' , par = [], dep = 0, this_appended = False, this_sequenceIndex = ''):
+    def __init__(self, value = '' , par = [], dep = 0, this_appended = False, this_sequenceIndex = '', this_timesPerSeq = ''):
         
         self.parent = par
         
@@ -28,6 +28,7 @@ class Node:
         self.depth = dep
         self.appended = this_appended
         self.sequenceIndices = [this_sequenceIndex]
+        self.timesPerSeq  = [this_timesPerSeq]
 
     # Deleting a child when evaluation is poor and appending the corresponding numeric value into a list
     def deleteChild(self, num):
@@ -83,32 +84,40 @@ class Tree:
         
         current = self.root
         check = mycheck
+        just_created = False
         
         for direction in path:
             
             if not current.stop and current.children and mychars[direction] in [current.children[i].char for i in range(len(current.children))]:
                 
                 current = self.move_to_child(current, direction)
-                if current.depth == k and sequenceIndex not in current.sequenceIndices:
-                    current.sequenceIndices.append(sequenceIndex)
+                if current.depth == k:
+                    current.count += 1
+
+                    if not just_created:
+                        if current.sequenceIndices[-1] == sequenceIndex:
+                            current.timesPerSeq[-1] += 1                            
+                            #current.timesPerSeq[current.sequenceIndices.index(sequenceIndex)] += 1
+                        else:
+                            current.sequenceIndices.append(sequenceIndex)
+                            current.timesPerSeq.append(1)
+                    else:
+                        break
                 
                 if current.depth == k-1  and append_if_needed and not mychars[path[-1]] in [current.children[u].char for u in range(len(current.children))] and not mychars[path[-1]] in current.deleted:
-                    current.add_child(Node(mychars[path[-1]], current, current.depth+1, True, this_sequenceIndex=sequenceIndex))
+                    current.add_child(Node(mychars[path[-1]], current, current.depth+1, True, this_sequenceIndex=sequenceIndex, this_timesPerSeq = 1))
+                    just_created = True
                     check = False
             else:
                 return
-        
-        current.count += 1
-        
-        if check:
-            if sequenceIndex not in current.sequenceIndices:
-                current.sequenceIndices.append(sequenceIndex)
-            
+                
+        if check:   
             current.evalueateNode(num_kmers_scanned,k)
             if current.evaluation <= current.parent.evaluation:
                 this_char = current.char
                 par = self.move_to_parent(current)
                 par.deleteChild([par.children[i].char for i in range(len(par.children))].index(this_char))
+        
         return
 
 def del_list_inplace(l, id_to_del):
@@ -131,7 +140,10 @@ def check_tree(current, num_kmers_scanned, k):
                 del_list_inplace(current.children, to_be_deleted)
             for child in current.children:
                 child.evalueateNode(num_kmers_scanned,k)
-            
+                if child.evaluation <= current.evaluation:
+                    this_char = child.char
+                    current.deleteChild([current.children[i].char for i in range(len(current.children))].index(this_char))
+
             return
         else:
             for child in current.children:
