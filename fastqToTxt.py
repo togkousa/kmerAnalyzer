@@ -50,8 +50,13 @@ def save_results_to_file(data, name, outputFolder, seqIDs, seqName):
     with open(name, 'w') as f:
         for item in data:
             f.write("%s\n" % item)
+    
+    rows = [seqIDs[i][0] for i in range(len(seqIDs))]
+    IDs = [seqIDs[i][1] for i in range(len(seqIDs))]
 
-    df = pd.DataFrame(seqIDs, columns=['Row', 'ID'])
+    d = {'Row': rows, 'ID':IDs}
+
+    df = pd.DataFrame.from_dict(d)
     df.to_csv(seqName, index=False)
 
     os.chdir(currPath)
@@ -78,15 +83,19 @@ if __name__ == "__main__":
 
     files = os.listdir(inputFolder)
     
+
     for file in files:
         
         name = file[0:-6] + '.txt'
         seqName = file[0:-6] + '_sequencesIDs.csv'
         data, seqIds = read_fastq_file(inputFolder + '/' + file)
+        
         c = list(zip(seqIds, data))
         shuffle(c)
+        
         seqIDs, data = zip(*c)
         save_results_to_file(data, name, outputFolder, seqIDs, seqName)
+
         del data
     
     

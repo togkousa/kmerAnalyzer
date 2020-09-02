@@ -179,6 +179,7 @@ def listSortBasedOnEvaluation(sub_li):
 
 if __name__ == "__main__":
     
+    
     # preprocessing my input data
     exec(open("fastqToTxt.py").read())
     
@@ -240,5 +241,5 @@ if __name__ == "__main__":
             saveToFile.createCsvOutput(filename, treelist)
             saveToFile.createCsvOutputForSeqIndices(filename,seqIndices, timesPerSeq)
 
-            command = "python3 dataPostProcessing.py "+ filename
+            command = "python dataPostProcessing.py "+ filename
             os.system(command)
