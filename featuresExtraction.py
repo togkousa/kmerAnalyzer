@@ -9,13 +9,14 @@ import TreeClass
 import saveToFile
 import os
 import fastqToTxt
+import time
 
 # Some useful global variables
 mychars = ['A', 'C', 'G', 'T']
 iterations = 10000000
-training_perc = 0.4
+training_perc = 0.5
 kmin = 4
-kmax = 60
+kmax = 80
 #topN = 100000
 
 # Adding all children in a node
@@ -49,13 +50,13 @@ def kmer2path(kmer):
     
     path = []
     
-    for i in range(len(kmer)):
+    for letter in kmer:
         
-        if kmer[i] in mychars:
-            path.append(mychars.index(kmer[i]))
-        else:
+        try:
+            path.append(mychars.index(letter))
+        except ValueError:
             return -1
-    
+        
     return path
 
 # routine_1 is only for the first scan of file
@@ -87,9 +88,9 @@ def routine_1(fn, k, tree, numOfLines):
                         continue
                 else:
                     path.remove(path[0])
-                    if this_kmer[-1] in mychars:
+                    try:
                         path.append(mychars.index(this_kmer[-1]))
-                    else:
+                    except ValueError:
                         path = -1
                         continue
                 
@@ -130,9 +131,9 @@ def routine_2(fn, k, tree, numOfLines):
                 
                 else:
                     path.remove(path[0])
-                    if this_kmer[-1] in mychars:
+                    try:
                         path.append(mychars.index(this_kmer[-1]))
-                    else:
+                    except ValueError:
                         path = -1
                         continue
                     
@@ -186,6 +187,9 @@ if __name__ == "__main__":
     # Cd
     folder = 'Input'
     files = os.listdir(folder)
+
+    # Staring time
+    start = time.time()
     
     # Start
     for filename in files:
@@ -208,19 +212,21 @@ if __name__ == "__main__":
                 # Only the first time run the first routine
                 if k == 4:
                     tree = routine_1(file, k, tree, numOfLines)
-                    treelist, zipList = listTree(tree, root, '', [], [], k)
+                    #treelist, zipList = listTree(tree, root, '', [], [], k)
                                     
                 # Else run the second routine
                 else:
                     tree = routine_2(file, k , tree, numOfLines)
                     
                     # Forming treelist
-                    treelist, zipList = listTree(tree, root, '', [], [], k)
+                    # treelist, zipList = listTree(tree, root, '', [], [], k)
                     
                     # Check if it is time to exit
-                    if len(zipList) <= 1:
-                        break
-        
+                    #if len(zipList) <= 1:
+                    #    break
+            
+            treelist, zipList = listTree(tree, root, '', [], [], kvals[-1])
+
             # Printing Tree and forming necessary lists
             treelist = listSortBasedOnEvaluation(treelist)
             #treelist = treelist[0:topN]
@@ -241,5 +247,10 @@ if __name__ == "__main__":
             saveToFile.createCsvOutput(filename, treelist)
             saveToFile.createCsvOutputForSeqIndices(filename,seqIndices, timesPerSeq)
 
+            # Printing time
+            end = time.time()
+            print("Completed in  " + str(time.strftime('%H:%M:%S', time.gmtime(end-start))))
+            print("Completed in  " + str(end - start) + " seconds")
+            print("Total data file estimation: " + str(time.strftime('%H:%M:%S', time.gmtime(1000*(end-start)))))
             command = "python dataPostProcessing.py "+ filename
             os.system(command)
