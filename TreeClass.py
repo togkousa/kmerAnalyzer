@@ -96,8 +96,7 @@ class Tree:
 
                     if not just_created:
                         if current.sequenceIndices[-1] == sequenceIndex:
-                            current.timesPerSeq[-1] += 1                            
-                            #current.timesPerSeq[current.sequenceIndices.index(sequenceIndex)] += 1
+                            current.timesPerSeq[-1] += 1
                         else:
                             current.sequenceIndices.append(sequenceIndex)
                             current.timesPerSeq.append(1)
