@@ -28,9 +28,6 @@ def read_fastq_file(fn):
                 data.append(''.join(lines))
                 seqIDs.append([line, 'ID-' + str(id_counter)])
                 id_counter += 1
-                # Take only the first 13 lines
-                if id_counter == 14:
-                    break
                 lines = []
 
     
