@@ -44,21 +44,6 @@ def initialize_tree():
     
     return root, tree
 
-# Transforming a sequence into numbers in order to define a path
-# For example the path of ATGC is 0321
-def kmer2path(kmer):
-    
-    path = []
-    
-    for letter in kmer:
-        
-        try:
-            path.append(mychars.index(letter))
-        except ValueError:
-            return -1
-        
-    return path
-
 # routine_1 is only for the first scan of file
 # This means that routine1 is used only for k = 4
 def routine_1(fn, k, tree, numOfLines):
@@ -71,34 +56,15 @@ def routine_1(fn, k, tree, numOfLines):
         count = 0
         
         for myline in fh:
+            
             count += 1
-            
-            """
-            if count == iterations:
-                break
-            """
             print(str(count) + ", " + str(k) )
-            
-            
-            path = []
             
             for j in range(len(myline) - k):
                 
                 kmers_examined += 1
                 this_kmer = myline[j:j+k]
-                """
-                if j == 0 or path == -1:
-                    path = kmer2path(this_kmer)
-                    if path == -1:
-                        continue
-                else:
-                    path.remove(path[0])
-                    try:
-                        path.append(mychars.index(this_kmer[-1]))
-                    except ValueError:
-                        path = -1
-                        continue
-                """    
+                    
                 if count < int(numOfLines * training_perc):
                     tree.find_in_tree(this_kmer, False , kmers_examined, k, False, sequenceIndex=count-1)
                 else:
@@ -118,34 +84,13 @@ def routine_2(fn, k, tree, numOfLines):
         
         for myline in fh:  
             count += 1
-
-            """
-            if count == iterations:
-                break
-            """
-
             print(str(count) + ", " + str(k) )
-            path = []
             
             for j in range(len(myline) - k):
                 
                 kmers_examined += 1
                 this_kmer = myline[j:j+k]
-                
-                """
-                if j == 0 or path == -1:
-                    path = kmer2path(this_kmer)
-                    if path == -1:
-                        continue
-                
-                else:
-                    path.remove(path[0])
-                    try:
-                        path.append(mychars.index(this_kmer[-1]))
-                    except ValueError:
-                        path = -1
-                        continue
-                """   
+                  
                 if count < int(numOfLines * training_perc):
                     tree.find_in_tree(this_kmer, False , kmers_examined, k, True, sequenceIndex=count-1)
                 else:

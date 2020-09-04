@@ -20,6 +20,8 @@ class Node:
         self.children = []
         self.deleted = []
         
+        self.childrenchars = ['A', 'C', 'G', 'T'] if dep < 4 else []
+        
         self.char = value
         self.count = 0
         self.evaluation = 0
@@ -35,6 +37,7 @@ class Node:
         this_char = self.children[num].char
         
         del self.children[num]
+        del self.childrenchars[num]
         self.deleted.append(this_char)
        
         if not self.children and len(self.deleted) == 4:
@@ -87,11 +90,12 @@ class Tree:
         for this_char in kmer:
             
             try:
-                direction = [current.children[i].char for i in range(len(current.children))].index(this_char)
+                direction = current.childrenchars.index(this_char)
                 current = self.move_to_child(current, direction)
                 
-                if current.depth == k-1  and append_if_needed and not kmer[-1] in [current.children[u].char for u in range(len(current.children))] and not kmer[-1] in current.deleted:
+                if current.depth == k-1  and append_if_needed and not kmer[-1] in current.childrenchars and not kmer[-1] in current.deleted:
                     current.add_child(Node(kmer[-1], current, current.depth+1, True, this_sequenceIndex=sequenceIndex, this_timesPerSeq = 1))
+                    current.childrenchars.append(kmer[-1])
                     just_created = True
                     check = False
                     continue
@@ -117,7 +121,7 @@ class Tree:
             if current.evaluation <= current.parent.evaluation:
                 this_char = current.char
                 par = self.move_to_parent(current)
-                par.deleteChild([par.children[i].char for i in range(len(par.children))].index(this_char))
+                par.deleteChild(par.childrenchars.index(this_char))
         
         return
 
@@ -143,7 +147,7 @@ def check_tree(current, num_kmers_scanned, k):
                         to_be_deleted.append(current.children.index(child))
             if to_be_deleted:
                 del_list_inplace(current.children, to_be_deleted)
-            
+                del_list_inplace(current.childrenchars, to_be_deleted)            
             return
         else:
             for child in current.children:
