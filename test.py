@@ -25,6 +25,7 @@ def kmer2path2(kmer):
         try:
             path.append(mychars.index(letter))
         except ValueError:
+            print("hey op")
             return -1
         
     return path

@@ -18,7 +18,6 @@ class Node:
         self.parent = par
         
         self.children = []
-        self.childrenchars = []
         self.deleted = []
         
         self.char = value
@@ -70,9 +69,7 @@ class Tree:
     # Moving to child
     def move_to_child(self, current_node, direction):
         
-        goto = [current_node.children[i].char for i in range(len(current_node.children))].index(mychars[direction])
-        
-        return current_node.children[goto]
+        return current_node.children[direction]
     
     # Moving to parent
     def move_to_parent(self, current_node):
@@ -80,17 +77,25 @@ class Tree:
         return current_node.parent
   
     # Walking accross the path to find and evaluate the latter node
-    def find_in_tree(self, path, mycheck , num_kmers_scanned, k, append_if_needed, sequenceIndex = ''):
+    def find_in_tree(self, kmer, mycheck , num_kmers_scanned, k, append_if_needed, sequenceIndex = ''):
         
         current = self.root
         check = mycheck
         just_created = False
+        test = False
         
-        for direction in path:
+        for this_char in kmer:
             
-            if not current.stop and current.children and mychars[direction] in [current.children[i].char for i in range(len(current.children))]:
-                
+            try:
+                direction = [current.children[i].char for i in range(len(current.children))].index(this_char)
                 current = self.move_to_child(current, direction)
+                
+                if current.depth == k-1  and append_if_needed and not kmer[-1] in [current.children[u].char for u in range(len(current.children))] and not kmer[-1] in current.deleted:
+                    current.add_child(Node(kmer[-1], current, current.depth+1, True, this_sequenceIndex=sequenceIndex, this_timesPerSeq = 1))
+                    just_created = True
+                    check = False
+                    continue
+
                 if current.depth == k:
                     current.count += 1
 
@@ -103,14 +108,11 @@ class Tree:
                     else:
                         break
                 
-                if current.depth == k-1  and append_if_needed and not mychars[path[-1]] in [current.children[u].char for u in range(len(current.children))] and not mychars[path[-1]] in current.deleted:
-                    current.add_child(Node(mychars[path[-1]], current, current.depth+1, True, this_sequenceIndex=sequenceIndex, this_timesPerSeq = 1))
-                    just_created = True
-                    check = False
-            else:
+            except ValueError:
                 return
-                
-        if check:   
+        
+        
+        if check and not current.stop:
             current.evalueateNode(num_kmers_scanned,k)
             if current.evaluation <= current.parent.evaluation:
                 this_char = current.char
@@ -133,16 +135,15 @@ def check_tree(current, num_kmers_scanned, k):
         if current.depth == k-1:
             to_be_deleted = []
             for child in current.children:
-                if child.count == 1:
+                if child.count == 1 or not child.char in mychars:
                     to_be_deleted.append(current.children.index(child))
+                else:
+                    child.evalueateNode(num_kmers_scanned,k)
+                    if child.evaluation <= current.evaluation:
+                        to_be_deleted.append(current.children.index(child))
             if to_be_deleted:
                 del_list_inplace(current.children, to_be_deleted)
-            for child in current.children:
-                child.evalueateNode(num_kmers_scanned,k)
-                if child.evaluation <= current.evaluation:
-                    this_char = child.char
-                    current.deleteChild([current.children[i].char for i in range(len(current.children))].index(this_char))
-
+            
             return
         else:
             for child in current.children:

@@ -13,7 +13,7 @@ import time
 
 # Some useful global variables
 mychars = ['A', 'C', 'G', 'T']
-iterations = 10000000
+#iterations = 10000000
 training_perc = 0.5
 kmin = 4
 kmax = 80
@@ -72,16 +72,21 @@ def routine_1(fn, k, tree, numOfLines):
         
         for myline in fh:
             count += 1
+            
+            """
             if count == iterations:
                 break
-            
+            """
             print(str(count) + ", " + str(k) )
+            
+            
             path = []
             
             for j in range(len(myline) - k):
                 
                 kmers_examined += 1
                 this_kmer = myline[j:j+k]
+                """
                 if j == 0 or path == -1:
                     path = kmer2path(this_kmer)
                     if path == -1:
@@ -93,11 +98,11 @@ def routine_1(fn, k, tree, numOfLines):
                     except ValueError:
                         path = -1
                         continue
-                
+                """    
                 if count < int(numOfLines * training_perc):
-                    tree.find_in_tree(path, False , kmers_examined, k, False, sequenceIndex=count-1)
+                    tree.find_in_tree(this_kmer, False , kmers_examined, k, False, sequenceIndex=count-1)
                 else:
-                    tree.find_in_tree(path, True, kmers_examined, k, False,  sequenceIndex=count-1)
+                    tree.find_in_tree(this_kmer, True, kmers_examined, k, False,  sequenceIndex=count-1)
             
     return tree
  
@@ -111,11 +116,14 @@ def routine_2(fn, k, tree, numOfLines):
         
         count = 0
         
-        for myline in fh:   
+        for myline in fh:  
             count += 1
+
+            """
             if count == iterations:
                 break
-            
+            """
+
             print(str(count) + ", " + str(k) )
             path = []
             
@@ -124,6 +132,7 @@ def routine_2(fn, k, tree, numOfLines):
                 kmers_examined += 1
                 this_kmer = myline[j:j+k]
                 
+                """
                 if j == 0 or path == -1:
                     path = kmer2path(this_kmer)
                     if path == -1:
@@ -136,12 +145,12 @@ def routine_2(fn, k, tree, numOfLines):
                     except ValueError:
                         path = -1
                         continue
-                    
+                """   
                 if count < int(numOfLines * training_perc):
-                    tree.find_in_tree(path, False , kmers_examined, k, True, sequenceIndex=count-1)
+                    tree.find_in_tree(this_kmer, False , kmers_examined, k, True, sequenceIndex=count-1)
                 else:
-                    tree.find_in_tree(path, True, kmers_examined, k, True, sequenceIndex=count-1)
-         
+                    tree.find_in_tree(this_kmer, True, kmers_examined, k, True, sequenceIndex=count-1)
+        
         TreeClass.check_tree(root, kmers_examined, k)
          
     return tree
@@ -168,7 +177,7 @@ def listTree(tree, curr_node, sequence, treelist, zipList, k):
         
         for child in curr_node.children:
             
-            newnode = tree.move_to_child(curr_node, mychars.index(child.char))
+            newnode = tree.move_to_child(curr_node, curr_node.children.index(child))
             treelist, zipList = listTree(tree, newnode, this_seq, treelist,zipList , k)
     
     return treelist, zipList
