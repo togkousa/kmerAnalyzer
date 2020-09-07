@@ -180,7 +180,7 @@ if __name__ == "__main__":
                     # treelist, zipList = listTree(tree, root, '', [], [], k)
                     
                     # Check if it is time to exit
-                    #if len(zipList) <= 1:
+                    # if len(zipList) <= 1:
                     #    break
             
             treelist, zipList = listTree(tree, root, '', [], [], kvals[-1])
