@@ -14,7 +14,8 @@ The code was developed in Python 2.7 version so you may need to intsall it befor
 The current application supports only .fasta files as input files.
 
 # How to execute
-
+1. Folders '~/data', '~/Input', '~/Output' and '~/ClusteringData' need to be emply, so you have to delete everything inside them.
+2. Place the input .fasta file into folder '~/data'. (A test file is uploaded in )
 
 # Example
 
