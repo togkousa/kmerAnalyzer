@@ -1,3 +1,5 @@
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Diploma-Thesis-Togkousidis-8920
 This is the full code that was developed during my Diploma Thesis.
 
@@ -14,10 +16,11 @@ The code was developed in Python 2.7 version so you may need to intsall it befor
 The current application supports only .fasta files as input files.
 
 # How to execute
-1. Folders 'Input/', 'Output/' and 'ClusteringData/' need to be empty. Otherwise, the application will remove everything (file or subfolder) inside them.
-2. Place the input .fasta file into folder 'data/'. (A test file is uploaded in the current github reposiroty called 'data/sample_dnaseq1.fasta')
-3. Go to terminal and change directory to your current local repository of the application.
-4. Execute the python script "featuresExtraction.py" -> (type the following command: $ python featuresExtraction.py)
+1. In order to run the application, there must be 
+2. Folders 'Input/', 'Output/' and 'ClusteringData/' need to be empty. Otherwise, the application will remove everything (file or subfolder) inside them.
+3. Place the input .fasta file into folder 'data/'. (A test file is uploaded in the current github reposiroty called 'data/sample_dnaseq1.fasta')
+4. Go to terminal and change directory to your current local repository of the application.
+5. Execute the python script "featuresExtraction.py" -> (type the following command: $ python featuresExtraction.py)
 
 Steps 3 and 4 can also be executed by using a python IDE.
 
