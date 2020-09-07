@@ -22,7 +22,8 @@ The current application supports only .fasta files as input files.
 Steps 3 and 4 can also be executed by using a python IDE.
 
 # Outputs
-Assuming that the input file is called 'filename.fasta'!
+Assuming that the input file is called 'filename.fasta':
+
 1. Inside the '/Input' folder there are 3 files. The first one is a .txt file called 'filename.txt' which contains the DNA sequences in a shuffled order. The second one is a .csv file called 'filename_sequenceIDs.csv' that contains the IDs of the sequences in the same shuffled order. The third one is also a .csv file called 'filename_sequencesIDs_unshuffled.csv' which contains the mapping of the sequences to the corresponding IDs in the original unshuffled order of the .fasta file.
 2. Inside the 'Output/filename/' folder there are 3 .csv files. File 'output.csv' contains 
 3.
