@@ -14,8 +14,8 @@ The code was developed in Python 2.7 version so you may need to intsall it befor
 The current application supports only .fasta files as input files.
 
 # How to execute
-1. Folders '/Input', '/Output' and '/ClusteringData' need to be empty. Otherwise, the application will remove everything (file or subfolder) inside them.
-2. Place the input .fasta file into folder '~/data'. (A test file is uploaded in the current github reposiroty called '/data/sample_dnaseq1.fasta')
+1. Folders 'Input/', 'Output/' and 'ClusteringData/' need to be empty. Otherwise, the application will remove everything (file or subfolder) inside them.
+2. Place the input .fasta file into folder 'data/'. (A test file is uploaded in the current github reposiroty called 'data/sample_dnaseq1.fasta')
 3. Go to terminal and change directory to your current local repository of the application.
 4. Execute the python script "featuresExtraction.py" -> (type the following command: $ python featuresExtraction.py)
 
@@ -24,11 +24,12 @@ Steps 3 and 4 can also be executed by using a python IDE.
 # Outputs
 Assuming that the input file is called 'filename.fasta':
 
-1. Inside the '/Input' folder there are 3 files. The first one is a .txt file called 'filename.txt' which contains the DNA sequences in a shuffled order. The second one is a .csv file called 'filename_sequenceIDs.csv' that contains the IDs of the sequences in the same shuffled order. The third one is also a .csv file called 'filename_sequencesIDs_unshuffled.csv' which contains the mapping of the sequences to the corresponding IDs in the original unshuffled order of the .fasta file.
-2. Inside the 'Output/filename/' folder there are 3 .csv files. File 'output.csv' contains 
-3.
+1. Inside the 'Input/' folder there are 3 files. The first one is a .txt file called 'filename.txt' which contains the DNA sequences in a shuffled order. The second one is a .csv file called 'filename_sequenceIDs.csv' that contains the IDs of the sequences in the same shuffled order. The third one is also a .csv file called 'filename_sequencesIDs_unshuffled.csv' which contains the mapping of the sequences to the corresponding IDs in the original unshuffled order of the .fasta file.
+2. Inside the 'Output/filename/' folder there are 3 .csv files. File 'output.csv' contains the list that is generated from the kmer-tree. Every row represents a k-mer. The first column is the k-mer itself, the second is the length of the k-mer, the third column its frequency (the number of times that was detected in the input data) and the fourth one is its evaluation in the tree. The two remaining files are associated with the sequences that every k-mer appears, as well as the number of times that each k-mer appears in every sequenceoccurs 
+3. Inside the 'ClusteringData/' directory there is a .csv file called 'clustData.csv' which is actually the data matrix that we aimed for. Every sequemce is being represented by a number k-mer based features. The value of every feature is the number of times each k-mer was detected in the current sequence.
 
 # Example
+
 
 
 
