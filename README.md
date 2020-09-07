@@ -29,7 +29,10 @@ Assuming that the input file is called 'filename.fasta':
 3. Inside the 'ClusteringData/' directory there is a .csv file called 'clustData.csv' which is actually the data matrix that we aimed for. Every sequemce is being represented by a number k-mer based features. The value of every feature is the number of times each k-mer was detected in the current sequence.
 
 # Example
-
-
+1. Clone the GitHub repository into a local directory.
+2. Change directory to your current local repository.
+3. Inside the 'data/' folder there is a small .fasta file called 'sample_dnaseq1.fasta'. The application will be executed with this file as an input.
+4. Execute the python script 'featuresExtraction.py'
+5. Output files should be pretty similar to those uploaded to the current repository. Small differences in the output files may be detected because of the shuffling process. However, these differences will be of minor importance, as the most significant k-mers will be accurately detected.
 
 
