@@ -14,8 +14,17 @@ The code was developed in Python 2.7 version so you may need to intsall it befor
 The current application supports only .fasta files as input files.
 
 # How to execute
-1. Folders '~/data', '~/Input', '~/Output' and '~/ClusteringData' need to be emply, so you have to delete everything inside them.
-2. Place the input .fasta file into folder '~/data'. (A test file is uploaded in )
+1. Folders '/Input', '/Output' and '/ClusteringData' need to be empty. Otherwise, the application will remove everything (file or subfolder) inside them.
+2. Place the input .fasta file into folder '~/data'. (A test file is uploaded in the current github reposiroty called '/data/sample_dnaseq1.fasta')
+3. Go to terminal and change directory to your current local repository of the application.
+4. Execute the python script "featuresExtraction.py" -> (type the following command: $ python featuresExtraction.py)
+
+Steps 3 and 4 can also be executed by using a python IDE.
+
+# Outputs
+1.Inside the '/Input' folder there are 2 files. The first one is a .txt file which contains the DNA sequences in a shuffled order. The second one is a .csv file, kind of dictionary, that maps the i-th sequence to a unique ID called "ID-i".
+2.
+3.
 
 # Example
 
