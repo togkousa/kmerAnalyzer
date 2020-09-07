@@ -8,16 +8,14 @@ Created on Mon Oct 14 11:15:44 2019
 import TreeClass
 import saveToFile
 import os
-import fastqToTxt
+import dataPreProcessing
 import time
 
 # Some useful global variables
 mychars = ['A', 'C', 'G', 'T']
-#iterations = 10000000
 training_perc = 0.5
 kmin = 4
 kmax = 80
-#topN = 100000
 
 # Adding all children in a node
 def add_all_nodes(current, depth):
@@ -136,7 +134,7 @@ if __name__ == "__main__":
     
     
     # preprocessing my input data
-    exec(open("fastqToTxt.py").read())
+    exec(open("dataPreProcessing.py").read())
     
     # Cd
     folder = 'Input'
@@ -150,7 +148,7 @@ if __name__ == "__main__":
         if filename.endswith('.txt'):
 
             file = folder + '/' + filename
-            numOfLines, lenOfLine = fastqToTxt.file_len(file)
+            numOfLines, lenOfLine = dataPreProcessing.file_len(file)
             filename = filename[0:-4]
             saveToFile.checkIfOutputFileExists(filename)
             
@@ -163,6 +161,9 @@ if __name__ == "__main__":
             # Main loop 
             for k in kvals:
                 
+                # Clearing console
+                os.system('cls' if os.name == 'nt' else 'clear')
+
                 # Only the first time run the first routine
                 if k == 4:
                     tree = routine_1(file, k, tree, numOfLines)
@@ -183,8 +184,6 @@ if __name__ == "__main__":
 
             # Printing Tree and forming necessary lists
             treelist = listSortBasedOnEvaluation(treelist)
-            #treelist = treelist[0:topN]
-            
             seqIndices = [treelist[i][4] for i in range(len(treelist))]
             timesPerSeq = [treelist[i][5] for i in range(len(treelist))]
 
@@ -205,6 +204,3 @@ if __name__ == "__main__":
             end = time.time()
             print("Completed in  " + str(time.strftime('%H:%M:%S', time.gmtime(end-start))))
             print("Completed in  " + str(end - start) + " seconds")
-            print("Total data file estimation: " + str(time.strftime('%H:%M:%S', time.gmtime(1000*(end-start)))))
-            command = "python dataPostProcessing.py "+ filename
-            os.system(command)
