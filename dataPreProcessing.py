@@ -79,6 +79,28 @@ def file_len(fname):
     return i+1, line_len
 
 
+def createDictionaryUnshuffled(outputFolder, seqIDs, seqName):
+    
+    currPath = os.getcwd()
+    os.chdir(outputFolder)
+    
+    if os.path.exists(seqName):
+        os.remove(seqName)
+    
+    rows = [seqIDs[i][0] for i in range(len(seqIDs))]
+    IDs = [seqIDs[i][1] for i in range(len(seqIDs))]
+
+    d = {'Row': rows, 'ID':IDs}
+
+    df = pd.DataFrame.from_dict(d)
+    df.to_csv(seqName, index=False)
+
+    os.chdir(currPath)
+    
+    return
+
+
+
 if __name__ == "__main__":
     
     inputFolder = 'data'
@@ -91,8 +113,11 @@ if __name__ == "__main__":
         
         name = file[0:-6] + '.txt'
         seqName = file[0:-6] + '_sequencesIDs.csv'
+        seqName_unshuffled = file[0:-6] + '_sequencesIDs_unshuffled.csv'
+
         data, seqIds = read_fastq_file(inputFolder + '/' + file)
-        
+        createDictionaryUnshuffled(outputFolder, seqIds, seqName_unshuffled)
+
         c = list(zip(seqIds, data))
         shuffle(c)
         
