@@ -8,6 +8,14 @@ Created on Wed Oct 23 16:44:55 2019
 import os
 import numpy as np
 import csv
+import shutil
+
+def clearingFolders(folder):
+    
+    shutil.rmtree(folder)
+    os.makedirs(folder)
+
+    return
 
 def createCsvOutput(filename, treelist):
 
@@ -57,15 +65,3 @@ def createCsvOutputForSeqIndices(filename, seqIndices, timesPerSeq):
 
     return
 
-
-def checkIfOutputFileExists(filename):
-    
-    directory = "Output/" + str(filename) + "/"
-    name = 'output.csv'
-    path = directory + name
-    
-    if os.path.exists(path):
-        os.remove(path)
-        print('Done')
-
-    return

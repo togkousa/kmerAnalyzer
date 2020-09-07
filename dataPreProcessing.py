@@ -10,6 +10,7 @@ import os
 import csv
 import pandas as pd
 
+
 def read_fastq_file(fn):
     
     data = []

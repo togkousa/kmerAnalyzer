@@ -132,10 +132,14 @@ def listSortBasedOnEvaluation(sub_li):
 
 if __name__ == "__main__":
     
-    
+    # Delete everything inside folders '~/Input', '~/Output' and '~/ClusteringData'
+    saveToFile.clearingFolders('Input')
+    saveToFile.clearingFolders('Output')
+    saveToFile.clearingFolders('ClusteringData')
+
     # preprocessing my input data
     exec(open("dataPreProcessing.py").read())
-    
+
     # Cd
     folder = 'Input'
     files = os.listdir(folder)
@@ -150,7 +154,6 @@ if __name__ == "__main__":
             file = folder + '/' + filename
             numOfLines, lenOfLine = dataPreProcessing.file_len(file)
             filename = filename[0:-4]
-            saveToFile.checkIfOutputFileExists(filename)
             
             # Range of k values
             kvals = list(range(kmin,kmax+1))
@@ -204,3 +207,5 @@ if __name__ == "__main__":
             end = time.time()
             print("Completed in  " + str(time.strftime('%H:%M:%S', time.gmtime(end-start))))
             print("Completed in  " + str(end - start) + " seconds")
+            command = "python dataPostProcessing.py "+ filename
+            os.system(command)
