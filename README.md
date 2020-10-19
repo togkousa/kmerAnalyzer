@@ -23,9 +23,9 @@ The current application supports only `fasta` files as input files.
 Assuming that the input file is called `filename.fasta`:
 
 1. Inside the `Input/` folder there are 3 files:
-  * The first one is a `txt` file called `filename.txt` which contains the DNA sequences in a shuffled order. 
-  * The second one is a `csv` file called `filename_sequenceIDs.csv` that contains the IDs of the sequences in the same shuffled order. 
-  * The third one is also a `csv` file called `filename_sequencesIDs_unshuffled.csv` which contains the mapping of the sequences to the corresponding IDs in the original unshuffled order of the `fasta` file.
+   * The first one is a `txt` file called `filename.txt` which contains the DNA sequences in a shuffled order. 
+   * The second one is a `csv` file called `filename_sequenceIDs.csv` that contains the IDs of the sequences in the same shuffled order. 
+   * The third one is also a `csv` file called `filename_sequencesIDs_unshuffled.csv` which contains the mapping of the sequences to the corresponding IDs in the original unshuffled order of the `fasta` file.
 2. Inside the `Output/filename/` folder there are 3 `csv` files: 
    * File `output.csv` contains the list that is generated from the kmer-tree. Every row represents a k-mer. The first column is the k-mer itself, the second is the length of the k-mer, the third column its frequency (the number of times that was detected in the input data) and the fourth one is its evaluation in the tree. 
    * The two remaining files are associated with the sequences that every k-mer appears, as well as the number of times that each k-mer appears in every sequence occurs.
