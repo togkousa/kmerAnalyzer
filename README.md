@@ -9,6 +9,9 @@ An alignment-free method capable of processing and counting k-mers in a reasonab
 ### Python Version
 The code was developed in Python 2.7 version.
 
+### Required Python Packages
+pandas, numpy
+
 ## Usage
 
 ### Input files
