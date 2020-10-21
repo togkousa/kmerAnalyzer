@@ -13,7 +13,7 @@
 #' 
 #' @param Acounts path to file containing the A counts of the sequnces
 #' 
-#' @seq.clustering path to sequence clustering file
+#' @param seq.clustering path to sequence clustering file
 #' 
 #' 
 
