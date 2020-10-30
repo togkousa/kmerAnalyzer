@@ -10,7 +10,8 @@ An alignment-free method capable of processing and counting k-mers in a reasonab
 The code was developed in Python 2.7 version.
 
 ### Required Python Packages
-pandas, numpy
+- [`pandas`](https://pandas.pydata.org/getting_started.html) 
+- [`numpy`](https://numpy.org/install/)
 
 ## Usage
 
