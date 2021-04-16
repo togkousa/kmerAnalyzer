@@ -13,9 +13,12 @@ import time
 
 # Some useful global variables
 mychars = ['A', 'C', 'G', 'T']
-training_perc = 0.5
-kmin = 4
-kmax = 80
+training_perc = 1
+
+# Parameters
+kmin = 4 	# don't change this, otherwise the code won't run correctly
+kmax = 15
+eval_factor = 1.3	# it should be greater than 1
 
 # Adding all children in a node
 def add_all_nodes(current, depth):
@@ -67,6 +70,8 @@ def routine_1(fn, k, tree, numOfLines):
                     tree.find_in_tree(this_kmer, False , kmers_examined, k, False, sequenceIndex=count-1)
                 else:
                     tree.find_in_tree(this_kmer, True, kmers_examined, k, False,  sequenceIndex=count-1)
+         
+        TreeClass.check_tree(root, kmers_examined, k)
             
     return tree
  
@@ -89,7 +94,7 @@ def routine_2(fn, k, tree, numOfLines):
                 kmers_examined += 1
                 this_kmer = myline[j:j+k]
                   
-                if count < int(numOfLines * training_perc):
+                if count <= int(numOfLines * training_perc):
                     tree.find_in_tree(this_kmer, False , kmers_examined, k, True, sequenceIndex=count-1)
                 else:
                     tree.find_in_tree(this_kmer, True, kmers_examined, k, True, sequenceIndex=count-1)

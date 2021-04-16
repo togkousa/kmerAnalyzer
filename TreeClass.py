@@ -5,6 +5,9 @@ Created on Thu Oct 17 20:51:10 2019
 @author: User
 """
 import math
+import featuresExtraction
+
+eval_factor = featuresExtraction.eval_factor
 
 mychars = ['A', 'C', 'G', 'T']
 
@@ -102,6 +105,7 @@ class Tree:
 
                 if current.depth == k:
                     current.count += 1
+                    
 
                     if not just_created:
                         if current.sequenceIndices[-1] == sequenceIndex:
@@ -118,7 +122,7 @@ class Tree:
         
         if check and not current.stop:
             current.evalueateNode(num_kmers_scanned,k)
-            if current.evaluation <= current.parent.evaluation:
+            if current.evaluation <= eval_factor*current.parent.evaluation:
                 this_char = current.char
                 par = self.move_to_parent(current)
                 par.deleteChild(par.childrenchars.index(this_char))
@@ -139,11 +143,11 @@ def check_tree(current, num_kmers_scanned, k):
         if current.depth == k-1:
             to_be_deleted = []
             for child in current.children:
+                child.evalueateNode(num_kmers_scanned,k)
                 if child.count == 1 or not child.char in mychars:
                     to_be_deleted.append(current.children.index(child))
                 else:
-                    child.evalueateNode(num_kmers_scanned,k)
-                    if child.evaluation <= current.evaluation:
+                    if child.evaluation <= eval_factor*current.evaluation:
                         to_be_deleted.append(current.children.index(child))
             if to_be_deleted:
                 del_list_inplace(current.children, to_be_deleted)
