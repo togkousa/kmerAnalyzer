@@ -12,9 +12,11 @@ import shutil
 
 def clearingFolders(folder):
     
-    shutil.rmtree(folder)
+    if os.path.isdir(folder):
+        shutil.rmtree(folder)
+    
     os.makedirs(folder)
-
+    
     return
 
 def createCsvOutput(filename, treelist):

@@ -10,13 +10,14 @@ import saveToFile
 import os
 import dataPreProcessing
 import time
+import shutil
 
 # Some useful global variables
 mychars = ['A', 'C', 'G', 'T']
 training_perc = 1
-
-# Parameters
 kmin = 4 	# don't change this, otherwise the code won't run correctly
+
+######## PARAMETERS #######################################
 kmax = 15
 eval_factor = 1.3	# it should be greater than 1
 
@@ -59,7 +60,7 @@ def routine_1(fn, k, tree, numOfLines):
         for myline in fh:
             
             count += 1
-            print(str(count) + ", " + str(k) )
+            print('seq = {0}, k = {1}'.format(count,k))
             
             for j in range(len(myline) - k):
                 
@@ -87,7 +88,7 @@ def routine_2(fn, k, tree, numOfLines):
         
         for myline in fh:  
             count += 1
-            print(str(count) + ", " + str(k) )
+            print('seq = {0}, k = {1}'.format(count,k))
             
             for j in range(len(myline) - k):
                 
@@ -140,7 +141,7 @@ if __name__ == "__main__":
     # Delete everything inside folders '~/Input', '~/Output' and '~/ClusteringData'
     saveToFile.clearingFolders('Input')
     saveToFile.clearingFolders('Output')
-    saveToFile.clearingFolders('ClusteringData')
+    #saveToFile.clearingFolders('ClusteringData')
 
     # preprocessing my input data
     exec(open("dataPreProcessing.py").read())
@@ -214,3 +215,8 @@ if __name__ == "__main__":
             print("Completed in  " + str(end - start) + " seconds")
             command = "python dataPostProcessing.py "+ filename
             os.system(command)
+    
+    # Delete input folder (useless)
+    shutil.rmtree('Input')
+
+

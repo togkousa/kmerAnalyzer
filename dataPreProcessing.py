@@ -118,11 +118,11 @@ if __name__ == "__main__":
         data, seqIds = read_fastq_file(inputFolder + '/' + file)
         createDictionaryUnshuffled(outputFolder, seqIds, seqName_unshuffled)
 
-        c = list(zip(seqIds, data))
-        shuffle(c)
+        #c = list(zip(seqIds, data))
+        #shuffle(c)
+        #seqIds, data = zip(*c)
         
-        seqIDs, data = zip(*c)
-        save_results_to_file(data, name, outputFolder, seqIDs, seqName)
+        save_results_to_file(data, name, outputFolder, seqIds, seqName)
 
         del data
     
