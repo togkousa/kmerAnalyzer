@@ -36,6 +36,9 @@ Assuming that the input file is called `filename.fasta`:
    * File `output.csv` contains the list that is generated from the kmer-tree. Every row represents a k-mer. The first column is the k-mer itself, the second is the length of the k-mer, the third column its frequency (the number of times that was detected in the input data) and the fourth one is its evaluation in the tree. 
    * The two remaining files are associated with the sequences that every k-mer appears, as well as the number of times that each k-mer appears in every sequence occurs.
 
+## Extra comments
+- While executing kmerAnalyzer, a folder called `input` is created isnide the project direcoty, containing some necessary files for the execution process. The folder is deleted at the end of the process.
+
 ## Data availability 
 
 SARS-CoV-2 data have been downloaded from [NCBI SARS-CoV-2 Resources](https://www.ncbi.nlm.nih.gov/sars-cov-2/).
