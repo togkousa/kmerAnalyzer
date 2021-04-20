@@ -38,13 +38,14 @@ def loadClusteringData(filename):
     seqIndicesFile = 'Output/'+ filename +'/seqIndices.csv'
     timesPerSeqFile = 'Output/'+ filename +'/timesPerSeq.csv'
     seqIDsFile = 'Input/'+ filename +'_sequencesIDs.csv'
-    clusteringDataPath = 'ClusteringData/clustData.csv'
-    clusteringDataPathNoHeaers = 'ClusteringData/clustData_no_headres.csv'
+    clusteringDataPath = 'Output/clustData.csv'
+    clusteringDataPathNoHeaers = 'Output/clustData_no_headres.csv'
     
     with open(dataFile) as csvfile:
         cpamreader = csv.reader(csvfile)
         inputData = list(cpamreader)
-    
+    inputData = inputData[1:]
+
     with open(seqIndicesFile) as csvfile:
         cpamreader = csv.reader(csvfile)
         seqIndices = list(cpamreader)

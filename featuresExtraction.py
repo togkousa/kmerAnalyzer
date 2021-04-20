@@ -10,12 +10,17 @@ import saveToFile
 import os
 import dataPreProcessing
 import time
+import shutil
 
 # Some useful global variables
 mychars = ['A', 'C', 'G', 'T']
-training_perc = 0.5
-kmin = 4
-kmax = 80
+training_perc = 1
+kmin = 4 	# don't change this, otherwise the code won't run correctly
+
+
+######## PARAMETERS #######################################
+kmax = 20
+eval_factor = 1.3	# it should be greater than 1
 
 # Adding all children in a node
 def add_all_nodes(current, depth):
@@ -56,7 +61,7 @@ def routine_1(fn, k, tree, numOfLines):
         for myline in fh:
             
             count += 1
-            print(str(count) + ", " + str(k) )
+            print('seq = {0}, k = {1}'.format(count,k))
             
             for j in range(len(myline) - k):
                 
@@ -67,6 +72,10 @@ def routine_1(fn, k, tree, numOfLines):
                     tree.find_in_tree(this_kmer, False , kmers_examined, k, False, sequenceIndex=count-1)
                 else:
                     tree.find_in_tree(this_kmer, True, kmers_examined, k, False,  sequenceIndex=count-1)
+        
+        TreeClass.found_kmers = False
+        TreeClass.check_tree(root, kmers_examined, k)
+        
             
     return tree
  
@@ -82,18 +91,19 @@ def routine_2(fn, k, tree, numOfLines):
         
         for myline in fh:  
             count += 1
-            print(str(count) + ", " + str(k) )
+            print('seq = {0}, k = {1}'.format(count,k))
             
             for j in range(len(myline) - k):
                 
                 kmers_examined += 1
                 this_kmer = myline[j:j+k]
                   
-                if count < int(numOfLines * training_perc):
+                if count <= int(numOfLines * training_perc):
                     tree.find_in_tree(this_kmer, False , kmers_examined, k, True, sequenceIndex=count-1)
                 else:
                     tree.find_in_tree(this_kmer, True, kmers_examined, k, True, sequenceIndex=count-1)
         
+        TreeClass.found_kmers = False
         TreeClass.check_tree(root, kmers_examined, k)
          
     return tree
@@ -135,7 +145,7 @@ if __name__ == "__main__":
     # Delete everything inside folders '~/Input', '~/Output' and '~/ClusteringData'
     saveToFile.clearingFolders('Input')
     saveToFile.clearingFolders('Output')
-    saveToFile.clearingFolders('ClusteringData')
+    #saveToFile.clearingFolders('ClusteringData')
 
     # preprocessing my input data
     exec(open("dataPreProcessing.py").read())
@@ -171,17 +181,17 @@ if __name__ == "__main__":
                 if k == 4:
                     tree = routine_1(file, k, tree, numOfLines)
                     #treelist, zipList = listTree(tree, root, '', [], [], k)
-                                    
+                    if not TreeClass.found_kmers:
+                        print('For eval_factor = {0}, no k-mers of k = {1} were found. To examine higher k-values, you should probably assign a lower value to eval_factor'.format(eval_factor,k))
+                        break
+
                 # Else run the second routine
                 else:
                     tree = routine_2(file, k , tree, numOfLines)
                     
-                    # Forming treelist
-                    # treelist, zipList = listTree(tree, root, '', [], [], k)
-                    
-                    # Check if it is time to exit
-                    # if len(zipList) <= 1:
-                    #    break
+                    if not TreeClass.found_kmers:
+                        print('For eval_factor = {0}, no k-mers of k = {1} were found. To examine higher k-values, you should probably assign a lower value to eval_factor'.format(eval_factor,k))
+                        break
             
             treelist, zipList = listTree(tree, root, '', [], [], kvals[-1])
 
@@ -209,3 +219,8 @@ if __name__ == "__main__":
             print("Completed in  " + str(end - start) + " seconds")
             command = "python dataPostProcessing.py "+ filename
             os.system(command)
+    
+    # Delete input folder (useless)
+    shutil.rmtree('Input')
+
+
