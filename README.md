@@ -20,7 +20,7 @@ The current application supports only `.fasta` files as input files.
 
 ### How to execute
 1. In order to execute the application, there must be a unique `fasta` file inside the `data/` folder, which will be used as an input to the current k-mer analyzer toolkit.
-2. Folder `Output/` needS to be empty. Otherwise, the application will remove everything (file or subfolder) inside it. In case the folder doesn't exist, it wil be created automatically.
+2. Folder `Output/` needs to be empty. Otherwise, the application will remove everything (file or subfolder) inside it. In case the folder doesn't exist, it wil be created automatically.
 3. Specify the parameters inside `featuresExtraction.py` script in **lines 22-23**, `kmax` and `eval_factor`. `Eval_factor` parameter determines the strictness in the assessment of kmers of each length. Recommended values for `eval_factor` lie inside the interval [1,2]. For optimal results, it's highly recommended to select a value between [1.2, 1.5]. At any case, for values lower than 1, the application won't run properly
 4. Execute the python script `featuresExtraction.py` 
 
