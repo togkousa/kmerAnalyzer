@@ -33,7 +33,7 @@ Assuming that the input file is called `filename.fasta`:
    * The two remaining files are associated with the sequences that every k-mer appears, and the number of times that each k-mer appears in every sequence occurs as well.
 
 ### Extra comments
-- It's important to have a look at the lengths of the sequences, prior to executing kmerAnalyzer. For example, in the example dataset, the sequence with header `>ERR525627.984.1 984 length=31` has length 31, so probably its better to either exclude this sequence (data filtering) or examine lower k-values, e.g. up to 20.
+- It's important to have a look at the lengths of the sequences, prior to executing kmerAnalyzer. For example, in the example dataset, the sequence with header `>ERR525627.984.1 984 length=31` has length 31, so probably its better to either exclude this sequence (data filtering) or examine lower k-values, e.g. up to 20. However, if we set `kmax = 35`, the code seems to work properly.
 - While executing kmerAnalyzer, a folder called `input` is created isnide the project direcoty, containing some necessary files for the execution process. The folder is deleted at the end of the process.
 
 ## Data availability 
