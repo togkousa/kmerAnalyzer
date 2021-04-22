@@ -7,7 +7,7 @@ An alignment-free method capable of processing and counting k-mers in a reasonab
 ## Installation
 
 ### Python Version
-The code was developed in Python 2.7 version.
+kmerAnalyzer was initially implemented in **Python 2.7** version, but it seems to work pretty well in **Python 3.8** too.
 
 ### Required Python Packages
 - [`pandas`](https://pandas.pydata.org/getting_started.html) 
