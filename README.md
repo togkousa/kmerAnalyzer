@@ -1,4 +1,6 @@
+
 # A computational framework for pattern detection on unaligned sequences: An application on SARS-CoV-2 data
+
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview

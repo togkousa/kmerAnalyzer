@@ -20,6 +20,7 @@ kmin = 4 	# don't change this, otherwise the code won't run correctly
 
 ######## PARAMETERS #######################################
 kmax = 20
+
 eval_factor = 1.3	# it should be greater than 1
 
 # Adding all children in a node
@@ -75,7 +76,6 @@ def routine_1(fn, k, tree, numOfLines):
         
         TreeClass.found_kmers = False
         TreeClass.check_tree(root, kmers_examined, k)
-        
             
     return tree
  

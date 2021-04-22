@@ -7,6 +7,7 @@ Created on Thu Oct 17 20:51:10 2019
 import math
 import featuresExtraction
 
+
 eval_factor = featuresExtraction.eval_factor
 found_kmers = True
 mychars = ['A', 'C', 'G', 'T']
