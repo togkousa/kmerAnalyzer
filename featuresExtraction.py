@@ -17,10 +17,8 @@ mychars = ['A', 'C', 'G', 'T']
 training_perc = 1
 kmin = 4 	# don't change this, otherwise the code won't run correctly
 
-
 ######## PARAMETERS #######################################
 kmax = 20
-
 eval_factor = 1.3	# it should be greater than 1
 
 # Adding all children in a node
