@@ -18,7 +18,7 @@ training_perc = 1
 kmin = 4 	# don't change this, otherwise the code won't run correctly
 
 ######## PARAMETERS #######################################
-kmax = 15
+kmax = 20
 eval_factor = 1.3	# it should be greater than 1
 
 # Adding all children in a node
@@ -71,7 +71,8 @@ def routine_1(fn, k, tree, numOfLines):
                     tree.find_in_tree(this_kmer, False , kmers_examined, k, False, sequenceIndex=count-1)
                 else:
                     tree.find_in_tree(this_kmer, True, kmers_examined, k, False,  sequenceIndex=count-1)
-         
+        
+        TreeClass.found_kmers = False
         TreeClass.check_tree(root, kmers_examined, k)
             
     return tree
@@ -100,6 +101,7 @@ def routine_2(fn, k, tree, numOfLines):
                 else:
                     tree.find_in_tree(this_kmer, True, kmers_examined, k, True, sequenceIndex=count-1)
         
+        TreeClass.found_kmers = False
         TreeClass.check_tree(root, kmers_examined, k)
          
     return tree
@@ -177,17 +179,17 @@ if __name__ == "__main__":
                 if k == 4:
                     tree = routine_1(file, k, tree, numOfLines)
                     #treelist, zipList = listTree(tree, root, '', [], [], k)
-                                    
+                    if not TreeClass.found_kmers:
+                        print('For eval_factor = {0}, no k-mers of k = {1} were found. To examine higher k-values, you should probably assign a lower value to eval_factor'.format(eval_factor,k))
+                        break
+
                 # Else run the second routine
                 else:
                     tree = routine_2(file, k , tree, numOfLines)
                     
-                    # Forming treelist
-                    # treelist, zipList = listTree(tree, root, '', [], [], k)
-                    
-                    # Check if it is time to exit
-                    # if len(zipList) <= 1:
-                    #    break
+                    if not TreeClass.found_kmers:
+                        print('For eval_factor = {0}, no k-mers of k = {1} were found. To examine higher k-values, you should probably assign a lower value to eval_factor'.format(eval_factor,k))
+                        break
             
             treelist, zipList = listTree(tree, root, '', [], [], kvals[-1])
 

@@ -117,6 +117,7 @@ if __name__ == "__main__":
 
         data, seqIds = read_fastq_file(inputFolder + '/' + file)
         createDictionaryUnshuffled(outputFolder, seqIds, seqName_unshuffled)
+        createDictionaryUnshuffled('Output', seqIds, 'heades_to_IDS.csv')
 
         #c = list(zip(seqIds, data))
         #shuffle(c)

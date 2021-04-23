@@ -32,6 +32,7 @@ def createCsvOutput(filename, treelist):
     with open(path, 'w') as write_obj:
         # Create a writer object from csv module
         csv_writer = csv.writer(write_obj)
+        csv_writer.writerow(['K-mer', 'Length', 'Count', 'Evaluation'])
         for i in range(len(treelist)):
             # Add contents of list as last row in the csv file
             csv_writer.writerow(treelist[i])

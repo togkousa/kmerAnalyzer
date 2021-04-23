@@ -44,7 +44,8 @@ def loadClusteringData(filename):
     with open(dataFile) as csvfile:
         cpamreader = csv.reader(csvfile)
         inputData = list(cpamreader)
-    
+    inputData = inputData[1:]
+
     with open(seqIndicesFile) as csvfile:
         cpamreader = csv.reader(csvfile)
         seqIndices = list(cpamreader)

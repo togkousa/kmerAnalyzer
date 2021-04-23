@@ -7,8 +7,9 @@ Created on Thu Oct 17 20:51:10 2019
 import math
 import featuresExtraction
 
-eval_factor = featuresExtraction.eval_factor
 
+eval_factor = featuresExtraction.eval_factor
+found_kmers = True
 mychars = ['A', 'C', 'G', 'T']
 
 class Node:
@@ -137,6 +138,8 @@ def del_list_inplace(l, id_to_del):
 # Deleting useless nodes
 def check_tree(current, num_kmers_scanned, k):
     
+    global found_kmers
+    
     if current.stop or not current.children:
         return
     else:
@@ -151,8 +154,11 @@ def check_tree(current, num_kmers_scanned, k):
                         to_be_deleted.append(current.children.index(child))
             if to_be_deleted:
                 del_list_inplace(current.children, to_be_deleted)
-                del_list_inplace(current.childrenchars, to_be_deleted)            
+                del_list_inplace(current.childrenchars, to_be_deleted)
+            if not found_kmers and current.children:
+                found_kmers = True
             return
+        
         else:
             for child in current.children:
                 check_tree(child, num_kmers_scanned, k)
